@@ -24,6 +24,7 @@ header {
 
 header h1{
     display: flex;
+    cursor: pointer;
 }
 
 
