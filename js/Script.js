@@ -1,6 +1,6 @@
 document.querySelector(".menu-icon").addEventListener("click", function(event) {
     var dropdown = document.querySelector(".menu-dropdown");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
 });
 
 document.getElementById('toggle').addEventListener('click', function(event) {
