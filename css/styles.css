@@ -1,61 +1,129 @@
-document.querySelector(".menu-icon").addEventListener("click", function(event) {
-    var dropdown = document.querySelector(".menu-dropdown");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-});
+body {
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
 
-document.getElementById('toggle').addEventListener('click', function(event) {
-    event.stopPropagation(); // Evita la propagación del evento a otros elementos
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
 
-    var contenedorTexto = document.getElementById('contenedorTexto');
-    if (contenedorTexto) {
-        if (contenedorTexto.style.display === 'none' || contenedorTexto.style.display === '') {
-            contenedorTexto.style.display = 'flex'; // Hacer visible el div contenedor de texto
-            
-        } else {
-            contenedorTexto.style.display = 'none'; // Ocultar el div contenedor de texto
-        }
-    }
-});
+.menu-dropdown { 
+    display: none;
+    position: relative;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
 
-document.getElementById('toggle').addEventListener('click', function(event) {
-    event.stopPropagation(); // Evita la propagación del evento a otros elementos
+.menu-dropdown a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
 
-    var contenedorTexto = document.getElementById('contenedorTexto');
-    var modelo = document.getElementById('Modelo');
+.menu-icon {
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+
+#contenedorTexto {
+    display: flex;
+    flex-direction: column;
     
-    if (modelo) {
-        if (modelo.style.width === '80%') {
-            modelo.style.width = '100%'; // Centrar el modelo
-            modelo.style.margin = 'auto'; // Centrar horizontalmente el modelo
-        } else {
-            modelo.style.width = '80%'; // Descentrar el modelo
-            modelo.style.margin = 'initial'; // Reiniciar el margen
-        }
-    }
+    width: 30%;
+    position: fixed;
+    align-items: flex-end; /* Alinea el contenido a la derecha */
+    align-items: center;
+    right: 0; /* Posición a la derecha */
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+}
 
-    if (contenedorTexto) {
-        if (contenedorTexto.classList.contains('hidden')) {
-            contenedorTexto.classList.remove('hidden'); // Mostrar el div contenedor de texto
-        } else {
-            contenedorTexto.classList.add('hidden'); // Ocultar el div contenedor de texto
-        }
-    }
-});
+#contenedorTexto img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    padding: 5%;
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    var cambioTrigger = document.getElementById('cambio-trigger');
-    var modeloViewer = document.getElementById('Modelo');
+#Presentacion {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    cambioTrigger.addEventListener('click', function() {
-        // Obtener el modelo-viewer actual
-        var currentModel = modeloViewer.querySelector('model-viewer');
-        // Verificar qué modelo se está mostrando actualmente
-        if (currentModel.getAttribute('src') === 'media/glb/scenaVoxel.glb') {
-            // Si se está mostrando sceneVoxel.glb, cambiar a contenedor.glb
-            currentModel.setAttribute('src', 'media/glb/contenedor.glb');
-        } else {
-            // Si se está mostrando contenedor.glb o cualquier otro modelo, cambiar a sceneVoxel.glb
-            currentModel.setAttribute('src', 'media/glb/scenaVoxel.glb');
-        }
-    });
-});
+.SegTitulo {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#Modelo {
+    align-items: left; 
+    width: 80%;
+    height: 95vh;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%; 
+    display: block; 
+    margin: auto; 
+}
+
+.hidden {
+    display: none;
+}
+
+#toggle {
+    padding-top: 50vh;
+    padding-right: 1vw;
+    display: flex;
+    font-size: 50px; 
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
