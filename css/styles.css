@@ -17,13 +17,13 @@ header {
     width: 100%;
     z-index: 1000;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
 }
+
 
 header h1{
     display: flex;
-    position: fixed;
 }
 
 
@@ -44,7 +44,6 @@ header h1{
 
 .menu-icon {
     display: flex;
-    position: fixed;
     cursor: pointer;
 }
 
@@ -124,7 +123,7 @@ model-viewer {
 }
 
 #toggle {
-    padding-top: 50vh;
+    position: fixed;
     padding-right: 1vw;
     display: flex;
     font-size: 50px; 
