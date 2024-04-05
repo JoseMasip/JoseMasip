@@ -7,11 +7,17 @@ document.getElementById('toggle').addEventListener('click', function(event) {
     event.stopPropagation(); // Evita la propagación del evento a otros elementos
 
     var contenedorTexto = document.getElementById('contenedorTexto');
-    if (contenedorTexto) {
-        if (contenedorTexto.classList.contains('hidden') || contenedorTexto.style.display === 'none' || contenedorTexto.style.display === '') {
-            contenedorTexto.classList.remove('hidden'); // Mostrar el div contenedor de texto
+    var modelo = document.getElementById('Modelo');
+
+    if (contenedorTexto && modelo) {
+        if (contenedorTexto.style.display === 'none' || contenedorTexto.style.display === '') {
+            contenedorTexto.style.display = 'flex'; // Mostrar el div contenedor de texto
+            modelo.style.width = '100%'; // Centrar el modelo
+            modelo.style.margin = 'auto'; // Centrar horizontalmente el modelo
         } else {
-            contenedorTexto.classList.add('hidden'); // Ocultar el div contenedor de texto
+            contenedorTexto.style.display = 'none'; // Ocultar el div contenedor de texto
+            modelo.style.width = '80%'; // Descentrar el modelo
+            modelo.style.margin = 'initial'; // Reiniciar el margen
         }
     }
 
