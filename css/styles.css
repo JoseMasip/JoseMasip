@@ -7,8 +7,6 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -17,8 +15,17 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+
+header h1{
+    display: flex;
+    position: fixed;
+}
+
 
 .menu-dropdown { 
     display: none;
@@ -29,13 +36,15 @@ header {
 }
 
 .menu-dropdown a {
-    display: block;
+    display: flex;
     padding: 10px;
     color: #fff;
     text-decoration: none;
 }
 
 .menu-icon {
+    display: flex;
+    position: fixed;
     cursor: pointer;
 }
 
