@@ -20,6 +20,15 @@ header h1 {
     cursor: pointer;
 }
 
+#left-content {
+    float: left;
+}
+
+#right-content {
+    float: right;
+    padding-right: 2%;
+}
+
 .menu-dropdown { 
     display: none;
     position: relative;
