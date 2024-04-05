@@ -8,21 +8,14 @@ document.getElementById('toggle').addEventListener('click', function(event) {
 
     var contenedorTexto = document.getElementById('contenedorTexto');
     if (contenedorTexto) {
-        if (contenedorTexto.style.display === 'none' || contenedorTexto.style.display === '') {
-            contenedorTexto.style.display = 'flex'; // Hacer visible el div contenedor de texto
-            
+        if (contenedorTexto.classList.contains('hidden') || contenedorTexto.style.display === 'none' || contenedorTexto.style.display === '') {
+            contenedorTexto.classList.remove('hidden'); // Mostrar el div contenedor de texto
         } else {
-            contenedorTexto.style.display = 'none'; // Ocultar el div contenedor de texto
+            contenedorTexto.classList.add('hidden'); // Ocultar el div contenedor de texto
         }
     }
-});
 
-document.getElementById('toggle').addEventListener('click', function(event) {
-    event.stopPropagation(); // Evita la propagación del evento a otros elementos
-
-    var contenedorTexto = document.getElementById('contenedorTexto');
     var modelo = document.getElementById('Modelo');
-    
     if (modelo) {
         if (modelo.style.width === '80%') {
             modelo.style.width = '100%'; // Centrar el modelo
@@ -32,23 +25,15 @@ document.getElementById('toggle').addEventListener('click', function(event) {
             modelo.style.margin = 'initial'; // Reiniciar el margen
         }
     }
-
-    if (contenedorTexto) {
-        if (contenedorTexto.classList.contains('hidden')) {
-            contenedorTexto.classList.remove('hidden'); // Mostrar el div contenedor de texto
-        } else {
-            contenedorTexto.classList.add('hidden'); // Ocultar el div contenedor de texto
-        }
-    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     var cambioTrigger = document.getElementById('cambio-trigger');
-    var modeloViewer = document.getElementById('Modelo');
+    var modeloViewer = document.querySelector('#Modelo model-viewer');
 
     cambioTrigger.addEventListener('click', function() {
         // Obtener el modelo-viewer actual
-        var currentModel = modeloViewer.querySelector('model-viewer');
+        var currentModel = modeloViewer;
         // Verificar qué modelo se está mostrando actualmente
         if (currentModel.getAttribute('src') === 'media/glb/scenaVoxel.glb') {
             // Si se está mostrando sceneVoxel.glb, cambiar a contenedor.glb
@@ -59,4 +44,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
