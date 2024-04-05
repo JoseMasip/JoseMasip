@@ -8,7 +8,8 @@ body {
 header {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: line;
+    flex-wrap: wrap;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -18,6 +19,10 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000; 
+}
+
+header h1{
+    cursor: pointer;
 }
 
 .menu-dropdown { 
