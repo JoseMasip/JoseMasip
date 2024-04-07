@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/*
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("cambio-trigger").addEventListener("click", function(event) {
        
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/*
+
 
 <a href="sections/props.html">Props</a>
 
