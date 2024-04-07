@@ -16,9 +16,12 @@ header {
     z-index: 1;
 }
 header h1{
-    margin: 0.5vh;
-    padding: 0 5vh;
+    margin: 0 3vw;
     cursor: pointer;
+}
+header h1 a{
+    color: #fff;
+    text-decoration: none;
 }
 .menu-dropdown {
     padding: 0.5vh;
