@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("cambio-trigger").addEventListener("click", function(event) {
         window.location.href = 0;
         // Redirecciona a la página "props.html" al hacer clic en el elemento con id "cambio-trigger"
-        window.location.href = "http://127.0.0.1:5500/index.html";
+        window.location.href = "https://josemasip.github.io/JoseMasip/";
     });
 });
 
