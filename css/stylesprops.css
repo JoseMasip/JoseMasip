@@ -56,12 +56,11 @@ footer a {
     text-decoration: none;
 }
 main{
-    display: flex;
-    padding-top: 10vh;
-    height: 90vh;
     justify-content: center;
     align-items: center;
 }
 #Modelo{
+    padding: 20% 20%;
     display: flex;
+    flex-wrap: wrap;
 }
