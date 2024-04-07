@@ -62,5 +62,11 @@ main{
 #Modelo{
     padding: 20% 20%;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    background-color: #5cfff7;
+}
+model-viewer {
+    background-color: #fff;
+    margin-top: 10px;
 }
