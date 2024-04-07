@@ -59,14 +59,8 @@ main{
     justify-content: center;
     align-items: center;
 }
-#Modelo{
-    padding: 20% 20%;
+#Galeria{
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: #5cfff7;
-}
-model-viewer {
-    background-color: #fff;
-    margin-top: 10px;
 }
