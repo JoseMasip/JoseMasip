@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     document.querySelector(".menu-icon").addEventListener("click", function(event) {
-        var dropdown = document.querySelector(".menu-dropdown");
-        dropdown.style.display = dropdown.style.display == "none" ? "flex": "none";
+        toggleMenu();
     });
 });
 
+function toggleMenu() {
+    var dropdown = document.querySelector(".menu-dropdown");
+    dropdown.style.display = dropdown.style.display == "none" ? "flex": "none";
+}
 /*
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("cambio-trigger").addEventListener("click", function(event) {
