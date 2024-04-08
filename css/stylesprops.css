@@ -3,7 +3,11 @@ body{
     margin: 0;
 }
 header {
-    background-color: #333;
+
+    background-image: url("/JoseMasip/media/img/gatoo.jpg"); /* URL de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el elemento */
+    background-position: center;
+   /* background-color: #333; */
     color: white;
     position: fixed;
     width: 100vw;
